@@ -6,8 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A020E38E2E6A2225009CF6E2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A020E38D2E6A2225009CF6E2 /* .gitignore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		52B011232E6A178900A51E1F /* RetroTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetroTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A020E38D2E6A2225009CF6E2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -32,6 +37,7 @@
 		52B0111A2E6A178900A51E1F = {
 			isa = PBXGroup;
 			children = (
+				A020E38D2E6A2225009CF6E2 /* .gitignore */,
 				52B011252E6A178900A51E1F /* RetroTrip */,
 				52B011242E6A178900A51E1F /* Products */,
 			);
@@ -109,6 +115,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A020E38E2E6A2225009CF6E2 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
