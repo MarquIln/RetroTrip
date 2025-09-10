@@ -10,5 +10,5 @@ import Foundation
 struct User {
     let id = UUID()
     let name: String
-    var badges: Badges
+    var badgesId: [UUID]
 }

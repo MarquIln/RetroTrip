@@ -9,5 +9,5 @@ import Foundation
 
 struct Quiz {
     let id = UUID()
-    let question: [Question]
+    let question: [UUID]
 }

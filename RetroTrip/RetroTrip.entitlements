@@ -7,7 +7,9 @@
 	<key>com.apple.developer.game-center</key>
 	<true/>
 	<key>com.apple.developer.icloud-container-identifiers</key>
-	<array/>
+	<array>
+		<string>iCloud.br.academy.marcos.RetroTrip</string>
+	</array>
 	<key>com.apple.developer.icloud-services</key>
 	<array>
 		<string>CloudKit</string>

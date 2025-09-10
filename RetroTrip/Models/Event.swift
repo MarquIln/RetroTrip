@@ -16,4 +16,8 @@ struct Event {
     let longitude: Double
     let latitude: Double
     let dificulty: String
+    let image: Data
+    let image3D: Data
+    let place: String
+    let quizId: UUID
 }
