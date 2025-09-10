@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct Home: View {
+    var name: String
+    
     var body: some View {
-        Text("Retro Trip")
+        Text("Hello \(name)")
     }
 }
 
