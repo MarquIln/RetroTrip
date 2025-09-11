@@ -6,8 +6,13 @@
 //
 
 import Foundation
+import SwiftData
 
-struct Quiz {
-    let id = UUID()
-    let question: [UUID]
+@Model
+class Quiz {
+    @Relationship(deleteRule: .cascade) var questions: [Question]
+
+    init(questions: [Question] = []) {
+        self.questions = questions
+    }
 }

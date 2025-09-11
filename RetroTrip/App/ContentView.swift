@@ -6,16 +6,26 @@
 //
 
 import SwiftUI
-import SwiftData
 
 struct ContentView: View {
-
+    @State private var isReady = false
+    
     var body: some View {
-
+        Group {
+            if isReady {
+                NavigationStack {
+                    Text("📚 App rodando normalmente")
+                }
+            } else {
+                ProgressView("Carregando dados iniciais...")
+            }
+        }
+        .onAppear {
+            Seed.shared.runSeedIfNeeded {
+                DispatchQueue.main.async {
+                    self.isReady = true
+                }
+            }
+        }
     }
-
-}
-
-#Preview {
-    ContentView()
 }

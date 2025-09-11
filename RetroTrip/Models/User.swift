@@ -6,9 +6,15 @@
 //
 
 import Foundation
+import SwiftData
 
-struct User {
-    let id = UUID()
-    let name: String
-    var badgesId: [UUID]
+@Model
+class User {
+    var name: String
+    @Relationship var badges: [Badges]
+
+    init(name: String, badges: [Badges] = []) {
+        self.name = name
+        self.badges = badges
+    }
 }
