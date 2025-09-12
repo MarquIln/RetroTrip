@@ -2,20 +2,15 @@
 //  Answer.swift
 //  RetroTrip
 //
-//  Created by Antonio Costa on 10/09/25.
+//  Created by Marcos on 12/09/25.
 //
 
-import SwiftData
+import Foundation
+import CloudKit
 
-@Model
-class Answer {
-    var answer: String
-    var isCorrect: Bool
-    @Relationship(inverse: \Question.answers) var question: Question?
-
-    init(answer: String, isCorrect: Bool, question: Question? = nil) {
-        self.answer = answer
-        self.isCorrect = isCorrect
-        self.question = question
-    }
+struct Answer {
+    let id: CKRecord.ID
+    let text: String
+    let isCorrect: Bool
+    let question: CKRecord.ID?
 }

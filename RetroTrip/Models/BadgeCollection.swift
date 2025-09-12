@@ -1,22 +1,15 @@
 //
-//  Colection.swift
+//  BadgeCollection.swift
 //  RetroTrip
 //
-//  Created by Antonio Costa on 10/09/25.
+//  Created by Marcos on 12/09/25.
 //
 
 import Foundation
-import SwiftData
+import CloudKit
 
-@Model
-class BadgeCollection {
-    var name: String
-    var image: Data
-    @Relationship(deleteRule: .cascade) var badges: [Badges]
-
-    init(name: String, image: Data, badges: [Badges] = []) {
-        self.name = name
-        self.image = image
-        self.badges = badges
-    }
+struct BadgeCollection {
+    let id: CKRecord.ID
+    let name: String
+    let badges: [CKRecord.ID]
 }

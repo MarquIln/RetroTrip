@@ -2,17 +2,13 @@
 //  Quiz.swift
 //  RetroTrip
 //
-//  Created by Antonio Costa on 10/09/25.
+//  Created by Marcos on 12/09/25.
 //
 
 import Foundation
-import SwiftData
+import CloudKit
 
-@Model
-class Quiz {
-    @Relationship(deleteRule: .cascade) var questions: [Question]
-
-    init(questions: [Question] = []) {
-        self.questions = questions
-    }
+struct Quiz {
+    let id: CKRecord.ID
+    let title: String
 }
