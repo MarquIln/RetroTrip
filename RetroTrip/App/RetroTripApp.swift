@@ -12,7 +12,7 @@ import SwiftData
 struct RetroTripApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(gameCenter: GameCenterViewModel())
         }
     }
 }
