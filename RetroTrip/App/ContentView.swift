@@ -8,29 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
-    var gameCenter: GameCenterViewModel
+    @State private var isReady = false
     
     var body: some View {
-        NavigationStack {
-            VStack {
-                if gameCenter.isAuthenticated {
-                    Text("Bem-vindo, \(gameCenter.playerName)!")
-                } else {
-                    Text("Conectando ao Game Center...")
+        Group {
+            if isReady {
+                NavigationStack {
+                    Text("📚 App rodando normalmente")
                 }
-                NavigationLink("Button") {
-                    Home(name: gameCenter.playerName)
-                }
-                Button("Logout") {
-                    print(gameCenter.playerName)
-                }
-            }
-            .onAppear {
-                print("Teste" + gameCenter.playerName)
-                gameCenter.authenticate()
-                print("Teste" + gameCenter.playerName)
+            } else {
+                ProgressView("Carregando dados iniciais...")
             }
         }
-        
+        .onAppear {
+            Seed.shared.runSeedIfNeeded {
+                DispatchQueue.main.async {
+                    self.isReady = true
+                }
+            }
+        }
     }
 }
